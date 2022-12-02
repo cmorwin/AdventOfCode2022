@@ -1,4 +1,5 @@
-# Challenge Goal: Count the largest amount of Calories carried by a single elf
+# Challenge Goal: Count the total amount of Calories carried by the 3 elves
+# individually carying the most Calories
 #
 #
 # We're going to time a couple methods for fun
