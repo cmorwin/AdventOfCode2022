@@ -21,17 +21,17 @@ total_score = 0
 
 
 start_time = time.process_time()
-for r in rounds[:-1]: # Ignore the last round which is empty due to double newline
+for r in rounds[:-1]:  # Ignore the last round which is empty due to double newline
     # We're going to convert the characters to integers
     # We do this by getting the ordinal of the character
     # ('A' = 65, 'B' == 66, 'C' == 67, 'X' == 88, 'Y', == 89, 'Z' == 90)
     # We normalize these so A == X == 1, B == Y == 2, C == Z == 3
-    opponent = ord(r[0]) - ord('A') + 1
-    us = ord(r[-1]) - ord('X') + 1
-    
+    opponent = ord(r[0]) - ord("A") + 1
+    us = ord(r[-1]) - ord("X") + 1
+
     # Directly add points for our RPS choice
     total_score += us
-    
+
     # Calculate for a draw
     if opponent == us:
         total_score += 3
@@ -77,18 +77,16 @@ start_time = time.process_time()
 #
 # Using this info, we can create a lookup table to figure out how many points
 # we should get for any given combination
-score_chart = [[4, 8, 3],
-               [1, 5, 9],
-               [7, 2, 6]]
+score_chart = [[4, 8, 3], [1, 5, 9], [7, 2, 6]]
 
-for r in rounds[:-1]: # Ignore the last round which is empty due to double newline
+for r in rounds[:-1]:  # Ignore the last round which is empty due to double newline
     # We're going to convert the characters to integers
     # We do this by getting the ordinal of the character
     # ('A' = 65, 'B' == 66, 'C' == 67, 'X' == 88, 'Y', == 89, 'Z' == 90)
     # We normalize these so A == X == 0, B == Y == 1, C == Z == 2
-    opponent = ord(r[0]) - ord('A')
-    us = ord(r[-1]) - ord('X')
-    
+    opponent = ord(r[0]) - ord("A")
+    us = ord(r[-1]) - ord("X")
+
     # Directly add points for our RPS choice
     total_score += score_chart[opponent][us]
 stop_time = time.process_time()
