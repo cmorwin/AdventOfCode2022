@@ -1,3 +1,5 @@
+# Core Files
+
 Challenge 1: Count the largest amount of Calories carried by a single elf
 
 `>python3 challenge1.py`
@@ -6,7 +8,7 @@ Challenge 2: Count the total amount of Calories carried by the 3 elves individua
 
 `>python3 challenge2.py`
 
+# Assumptions:
 
-Assumptions:
 `input.txt` for the day's challenges are in the current directory.
 
